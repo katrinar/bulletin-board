@@ -18,12 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let mapVc = MapViewController()
-        mapVc.title = "Map"
         let listVc = ListViewController()
-        listVc.title = "List"
         
+        let listNavController = UINavigationController(rootViewController: listVc)
+        
+        let mapNavController = UINavigationController(rootViewController: mapVc)
         let tabController = UITabBarController()
-        tabController.viewControllers = [mapVc, listVc]
+        tabController.viewControllers = [mapNavController, listNavController]
 
         self.window?.rootViewController = tabController
         

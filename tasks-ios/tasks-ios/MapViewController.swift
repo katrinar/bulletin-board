@@ -32,15 +32,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             name: Constants.kPostCreatedNotification,
             object: nil
         )
-
     }
     
     override func loadView() {
+        self.edgesForExtendedLayout = .None
         let frame = UIScreen.mainScreen().bounds
         let view = UIView(frame: frame)
         view.backgroundColor = UIColor.brownColor()
         self.view = view
-        
         
         self.mapView = MKMapView(frame: frame)
         self.mapView.delegate = self
@@ -50,7 +49,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let height = CGFloat(44)
         
         let btnCreate = UIButton(type: .Custom)
-        btnCreate.frame = CGRect(x: padding, y: padding, width: frame.size.width-2*padding, height: height)
+        btnCreate.frame = CGRect(x: padding, y: padding+44, width: frame.size.width-2*padding, height: height)
         btnCreate.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
         btnCreate.setTitle("Create Post Here", forState: .Normal)
         btnCreate.layer.borderColor = UIColor.whiteColor().CGColor
@@ -104,6 +103,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     }
                     dispatch_async(dispatch_get_main_queue(), {
                         self.mapView.addAnnotations(self.posts)
+                        
+                        let notification = NSNotification(
+                            name: Constants.kPostsReceivedNotification,
+                            object: nil,
+                            userInfo: ["posts":self.posts]
+                        )
+                        
+                        let notificationCenter = NSNotificationCenter.defaultCenter()
+                        notificationCenter.postNotification(notification)
                     })
                 }
             }
@@ -122,9 +130,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         let pin = MKPinAnnotationView(annotation: annotation, reuseIdentifier: pinId)
         pin.animatesDrop = true
         pin.canShowCallout = true
+        
+        let btnDetail = UIButton(type: .Custom)
+        btnDetail.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        let accessoryBtn = UIButton(type: .InfoDark)
+        pin.rightCalloutAccessoryView = accessoryBtn
+        
         return pin
     }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let post = view.annotation as? Post
+      
 
+        print("\(post?.postTitle)")
+        let postVc = PostViewController()
+        postVc.post = post
+        self.navigationController?.pushViewController(postVc, animated: true)
+
+    }
+    
     //MARK: - Custom Functions
     func showCreatePost(btn: UIButton){
         let createPostVc = CreatePostViewController()

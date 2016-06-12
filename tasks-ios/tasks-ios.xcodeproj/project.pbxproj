@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54E391631D0DB91C00020376 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E391621D0DB91C00020376 /* PostViewController.swift */; };
 		54E3E2061D047A5F001C35F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E2051D047A5F001C35F4 /* AppDelegate.swift */; };
 		54E3E20D1D047A5F001C35F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3E20C1D047A5F001C35F4 /* Assets.xcassets */; };
 		54E3E2101D047A5F001C35F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54E3E20E1D047A5F001C35F4 /* LaunchScreen.storyboard */; };
 		54E3E21A1D047B62001C35F4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E2191D047B62001C35F4 /* MapViewController.swift */; };
 		54E3E21C1D047C48001C35F4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E21B1D047C48001C35F4 /* ListViewController.swift */; };
 		54E3E21E1D048313001C35F4 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E21D1D048313001C35F4 /* CreatePostViewController.swift */; };
-		54E3E2231D04AA13001C35F4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E2221D04AA13001C35F4 /* Post.swift */; };
-		54E3E2251D04BBB0001C35F4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E2241D04BBB0001C35F4 /* Config.swift */; };
+		54E3E22B1D04BFAF001C35F4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E22A1D04BFAF001C35F4 /* Post.swift */; };
+		54E3E22D1D04C00D001C35F4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3E22C1D04C00D001C35F4 /* Config.swift */; };
 		65B4A8E2B19D995AE9C6DA9A /* Pods_tasks_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F420B1C5E1D360D7F44DC25 /* Pods_tasks_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		273801BDC48060A823B523DA /* Pods-tasks-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasks-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tasks-ios/Pods-tasks-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		4F420B1C5E1D360D7F44DC25 /* Pods_tasks_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tasks_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54E391621D0DB91C00020376 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostViewController.swift; path = "../../../../../Katrina/Desktop/bulletin-board/tasks-ios/tasks-ios/PostViewController.swift"; sourceTree = "<group>"; };
 		54E3E2021D047A5F001C35F4 /* tasks-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tasks-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E3E2051D047A5F001C35F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54E3E20C1D047A5F001C35F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,8 +31,8 @@
 		54E3E2191D047B62001C35F4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		54E3E21B1D047C48001C35F4 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		54E3E21D1D048313001C35F4 /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
-		54E3E2221D04AA13001C35F4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = "../../../../../Katrina/Desktop/tasks-ios/tasks-ios/models/Post.swift"; sourceTree = "<group>"; };
-		54E3E2241D04BBB0001C35F4 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = "../../../../Katrina/Desktop/tasks-ios/tasks-ios/Config.swift"; sourceTree = "<group>"; };
+		54E3E22A1D04BFAF001C35F4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = "../../../../../../Katrina/Desktop/bulletin-board/tasks-ios/tasks-ios/models/Post.swift"; sourceTree = "<group>"; };
+		54E3E22C1D04C00D001C35F4 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = "../../../../../Katrina/Desktop/bulletin-board/tasks-ios/tasks-ios/Config.swift"; sourceTree = "<group>"; };
 		7989DAF4B1430AD4200FBC93 /* Pods-tasks-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tasks-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-tasks-ios/Pods-tasks-ios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,9 +88,10 @@
 			children = (
 				54E3E2211D04A9FF001C35F4 /* models */,
 				54E3E2051D047A5F001C35F4 /* AppDelegate.swift */,
-				54E3E2241D04BBB0001C35F4 /* Config.swift */,
+				54E3E22C1D04C00D001C35F4 /* Config.swift */,
 				54E3E2191D047B62001C35F4 /* MapViewController.swift */,
 				54E3E21B1D047C48001C35F4 /* ListViewController.swift */,
+				54E391621D0DB91C00020376 /* PostViewController.swift */,
 				54E3E21D1D048313001C35F4 /* CreatePostViewController.swift */,
 				54E3E20C1D047A5F001C35F4 /* Assets.xcassets */,
 				54E3E20E1D047A5F001C35F4 /* LaunchScreen.storyboard */,
@@ -100,7 +103,7 @@
 		54E3E2211D04A9FF001C35F4 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				54E3E2221D04AA13001C35F4 /* Post.swift */,
+				54E3E22A1D04BFAF001C35F4 /* Post.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -229,10 +232,11 @@
 			files = (
 				54E3E2061D047A5F001C35F4 /* AppDelegate.swift in Sources */,
 				54E3E21A1D047B62001C35F4 /* MapViewController.swift in Sources */,
+				54E391631D0DB91C00020376 /* PostViewController.swift in Sources */,
 				54E3E21E1D048313001C35F4 /* CreatePostViewController.swift in Sources */,
-				54E3E2231D04AA13001C35F4 /* Post.swift in Sources */,
+				54E3E22D1D04C00D001C35F4 /* Config.swift in Sources */,
 				54E3E21C1D047C48001C35F4 /* ListViewController.swift in Sources */,
-				54E3E2251D04BBB0001C35F4 /* Config.swift in Sources */,
+				54E3E22B1D04BFAF001C35F4 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

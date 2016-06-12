@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let kPostCreatedNotification = "PostCreatedNotification"
+    static let kPostsReceivedNotification = "PostsReceivedNotification"
 }
