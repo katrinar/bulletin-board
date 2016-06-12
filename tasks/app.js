@@ -10,7 +10,7 @@ var routes = require('./routes/index');
 var api = require('./routes/api');
 var users = require('./routes/users');
 
-var mongoUrl = 'mongodb://localhost/tasks'
+var mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost/tasks'
 mongoose.connect(mongoUrl, function(err, res){
   if (err){
     console.log('DB Connection Failed: '+err)

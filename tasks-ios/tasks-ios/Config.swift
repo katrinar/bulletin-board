@@ -11,4 +11,7 @@ import Foundation
 struct Constants {
     static let kPostCreatedNotification = "PostCreatedNotification"
     static let kPostsReceivedNotification = "PostsReceivedNotification"
+//    static let kBaseUrl = "http://localhost:3000"
+    static let kBaseUrl = "https://kr-bulletinboard.herokuapp.com"
+
 }

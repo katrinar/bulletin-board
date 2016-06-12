@@ -60,7 +60,7 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         
         let height = CGFloat(32)
         
-        let fieldNames = ["Reply", "Email"]
+        let fieldNames = ["Reply", "From"]
         for fieldName in fieldNames {
             let field = UITextField(frame: CGRect(x: padding, y: y, width: width, height: height))
             field.placeholder = fieldName
@@ -85,11 +85,14 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         for textField in self.textFields {
             let placeholder = textField.placeholder?.lowercaseString
             replyInfo[placeholder!] = textField.text!
+            replyInfo["post"] = self.post.id
+            replyInfo["to"] = self.post.email
+            
         }
         
         print("\(replyInfo)")
 
-        let url = "http://localhost:3000/api/reply"
+        let url = Constants.kBaseUrl + "/api/reply"
         Alamofire.request(.POST, url, parameters: replyInfo).responseJSON { response in
             if let json = response.result.value as? Dictionary<String, AnyObject>{
                 print("\(json)")

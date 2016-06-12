@@ -56,11 +56,11 @@ class Post: NSObject, MKAnnotation {
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" // 2016-06-05T19:12:00.209Z
             self.timeStamp = dateFormatter.dateFromString(_timestamp)
             
-             print("TIMESTAMP: \(self.timeStamp)")
+//             print("TIMESTAMP: \(self.timeStamp)")
             
             dateFormatter.dateFormat = "MMM dd, yyyy" // "May 16, 2015"
             self.formattedDate = dateFormatter.stringFromDate(self.timeStamp)
-            print("Formatted Date: \(self.formattedDate)")
+//            print("Formatted Date: \(self.formattedDate)")
 
         }
         

@@ -89,7 +89,7 @@ class CreatePostViewController: UIViewController, UITextFieldDelegate, UITextVie
             postInfo["geo"] = [self.currentLocation.latitude, self.currentLocation.longitude]
 //            print("CREATE POST: \(postInfo)")
             
-            let url = "http://localhost:3000/api/post"
+            let url = Constants.kBaseUrl + "/api/post"
             Alamofire.request(.POST, url, parameters: postInfo).responseJSON { response in
                 if let json = response.result.value as? Dictionary<String, AnyObject>{
                     print("\(json)")

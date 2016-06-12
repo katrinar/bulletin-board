@@ -54,6 +54,22 @@ router.post('/:resource', function(req, res, next) {
 	var resource = req.params.resource
 
 	if (resource == 'reply'){ //reply to a post
+
+
+		var params = req.body
+
+		var sendgrid = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+
+		var replyMsg = params['reply'] + ". This came from " + params['from']
+		sendgrid.send({
+			to: params['to'],
+			from: 'karodriguez8@gmail.com',
+			subject: 'Someone Replied to your post!',
+			text: replyMsg
+		}, function(err){
+
+		})
+
 		Reply.create(req.body, function(err, result){
 			if (err){
 				res.json({

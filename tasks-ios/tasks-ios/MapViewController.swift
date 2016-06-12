@@ -90,7 +90,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.mapView.setRegion(coordinateRegion, animated: true)
         
         
-        let url = "http://localhost:3000/api/post"
+        let url = Constants.kBaseUrl + "/api/post"
         Alamofire.request(.GET, url, parameters: nil).responseJSON { response in
             
             if let json = response.result.value as? Dictionary<String, AnyObject> {
